@@ -1,0 +1,37 @@
+.header {
+  background: #ffdad5;
+  padding-top: 20px;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+  }
+  &__links {
+    display: flex;
+    column-gap: 40px;
+  }
+  &__link {
+    color: var(--gray-800, #424551);
+    font-weight: 700;
+    &:hover {
+      color: #FF3F3A;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+  }
+  &__register {
+    background: transparent;
+    color: #424551;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+  }
+}
