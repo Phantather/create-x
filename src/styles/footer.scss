@@ -1,0 +1,33 @@
+.footer{
+  background: var(--gray-900, #1E212C);
+  &__nav{
+    padding: 80px 0 60px;
+    display: flex;
+    column-gap: 80px;
+  }
+  &__left{
+    width: 30%;
+    &-info{
+      color: var(--white, #FFF);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+      margin: 24px 0 38px;
+    }
+    &-links{
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+    &-link{
+      svg path{
+        fill: #FFFFFF60;
+      }
+      &:hover{
+        svg path{
+          fill: #FFFFFF;
+        }
+      }
+    }
+  }
+}
