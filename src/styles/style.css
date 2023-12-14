@@ -64,7 +64,108 @@
   cursor: pointer;
   border: none;
 }
+.header__burgerMenu {
+  display: none;
+}
+.header__burgerMenu-links {
+  display: flex;
+  column-gap: 30px;
+}
+.header__burgerMenu-btns {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+.header__burger {
+  width: 50px;
+  height: 45px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 5px;
+}
+.header__burger span {
+  width: 100%;
+  height: 3px;
+  background: #1E212C;
+  position: relative;
+  border-radius: 3px;
+}
+.header__burger span::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 3px;
+  background: #1E212C;
+  border-radius: 3px;
+}
+.header__burger span::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background: #1E212C;
+  border-radius: 3px;
+}
+.header__burger.active span {
+  background: transparent;
+}
+.header__burger.active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.header__burger.active span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
 
+@media (max-width: 992px) {
+  .header__links, .header__right {
+    display: none;
+  }
+  .header__burgerMenu {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background: #FFF;
+    padding: 20px 0;
+    top: -100%;
+    left: 0;
+    transform: translateY(-100%);
+    border-radius: 0 0 20px 20px;
+  }
+  .header__burgerMenu.active {
+    top: 0;
+    transform: translateY(0);
+  }
+  .header__burger {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .header__burgerMenu {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .header__burgerMenu-links a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 425px) {
+  .header__burgerMenu-links, .header__burgerMenu-btns {
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+  }
+}
 .enjoy {
   padding: 127px 0 80px;
   background: #ffdad5;
